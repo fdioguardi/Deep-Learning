@@ -18,21 +18,25 @@ def calcular(dataframe):
 
     ###### 1) Calcular el valor promedio del atributo GRASA ######
     # COMPLETAR
+    promedio_grasa = np.mean(dataframe["GRASA"])
 
     ###### FIN COMPLETAR ######
 
     ######  2) Contar la cantidad sopas del tipo "CC" ######
     # COMPLETAR
+    cant_tipo_cc = len(dataframe.query("TIPO == 'CC'"))
 
     ###### FIN COMPLETAR ######
 
     ######  3) Encontrar la sopa con más sodio (y el valor) ######
 
     # COMPLETAR
-    max_sodio = 0
-    max_sodio_indice = 0
 
     # Implementacion 1
+    max_sodio_indice = dataframe["SODIO"].idxmax()
+    max_sodio = dataframe["SODIO"][max_sodio_indice]
+
+    # También se puede calcular el maximo con: dataframe["SODIO"].max()
 
     ###### FIN COMPLETAR ######
 
