@@ -18,13 +18,13 @@ def calcular(dataframe):
 
     ###### 1) Calcular el valor promedio del atributo GRASA ######
     # COMPLETAR
-    promedio_grasa = np.mean(dataframe["GRASA"])
+    promedio_grasa = dataframe["GRASA"].mean()
 
     ###### FIN COMPLETAR ######
 
     ######  2) Contar la cantidad sopas del tipo "CC" ######
     # COMPLETAR
-    cant_tipo_cc = len(dataframe.query("TIPO == 'CC'"))
+    cant_tipo_cc = (dataframe["TIPO"] == 'CC').sum()
 
     ###### FIN COMPLETAR ######
 
